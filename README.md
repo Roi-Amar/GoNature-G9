@@ -1,5 +1,9 @@
-GoNature-G9
-LOGO
+# GoNature-G9
+Nature parks reservation and mannagment system (Java)
+----------------------
+
+----------------------
+
 
 This project assigment was assigned and combined from three curses:
 -	Software Development Methodologies
@@ -19,4 +23,4 @@ Overall, we had a huge success and we learned a lot in the process (and we even 
 A special thanks to all Group9 members:
 g9 members profile links
 
-GIF
+![demo](assets/demo.gif)
