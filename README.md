@@ -15,7 +15,7 @@ The company name is goNature and the task was to build software that will ease t
 The task was not simple at all, but we were a strong team.
 Like all projects we started with the planning, we used git and Jira as our main tools for project management and tried to work in an Agile oriented way, using SCRUM methodology.
 We built the software using ocsf architecture, both frontend and backend sides were written in Java, for our database we choose to use MySQL.
-For our GUI we used JavaFX combined with JFonix and CSS. We decided upon a clean design and made all the GUI assets and icons ourselves. The project was demanding, and sometimes felt never-ending but eventually, we overcame any trouble we had.
+For our GUI we used JavaFX combined with Jfoenix and CSS. We decided upon a clean design and made all the GUI assets and icons ourselves. The project was demanding, and sometimes felt never-ending but eventually, we overcame any trouble we had.
 We built Test suites and test cases for our code and test the front-end functionality with Jubula.
 Both of our Java projects were documented using JavaDoc.
 
