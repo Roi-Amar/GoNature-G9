@@ -24,8 +24,9 @@ Overall, we had a huge success and we learned a lot in the process (and we even 
 Participantes:
 --------------
 
-* @nastyak6	* [nastyak6](https://github.com/nastyak6) 
-* @anastasia_kokin * [anastasia_kokin](https://www.linkedin.com/in/anastasia-kokin-957914197/)
+* Anastasia Kokin:
+[github](https://github.com/nastyak6) 
+[linkedin](https://www.linkedin.com/in/anastasia-kokin-957914197/)
 
 * @HodayaMekonen	* [HodayaMekonen](https://github.com/HodayaMekonen)
 
