@@ -24,22 +24,27 @@ Overall, we had a huge success and we learned a lot in the process (and we even 
 Participantes:
 --------------
 
-* Anastasia Kokin:
+* Anastasia Kokin
 [github](https://github.com/nastyak6) ,
-[linkedin](https://www.linkedin.com/in/anastasia-kokin-957914197/)
+[linkedIn](https://www.linkedin.com/in/anastasia-kokin-957914197/)
 
-* @HodayaMekonen	* [HodayaMekonen](https://github.com/HodayaMekonen)
+* Hodaya Mekonen
+[github](https://github.com/HodayaMekonen)
 
-* @RinatSt	* [RinatSt](https://github.com/RinatSt)
-* @rinat_stoudenets	* [rinat_stoudenets](https://www.linkedin.com/in/rinat-stoudenets-169915127/)
+* Rinat Stoudenets
+[github](https://github.com/RinatSt) ,
+[linkedIn](https://www.linkedin.com/in/rinat-stoudenets-169915127/)
 
-* @haimazu	* [haimazu](https://github.com/haimazu)
-* @haim_azulay	* [haim_azulay](https://www.linkedin.com/in/haimazulay/)
+* Haim Azulay
+[github](https://github.com/haimazu) ,
+[linkedIn](https://www.linkedin.com/in/haimazulay/)
 
-* @barKatz0610	* [barKatz0610](https://github.com/barKatz0610)
-* @bar_katz	* [bar_katz](https://www.linkedin.com/in/bar-katz-a07b5019b/)
+* Bar Katz
+[github](https://github.com/barKatz0610) ,
+[linkedIn](https://www.linkedin.com/in/bar-katz-a07b5019b/)
 
-* @Roi-Amar	* [Roi-Amar](https://github.com/Roi-Amar)
-* @roi_amar	* [roi_amar](https://www.linkedin.com/in/roi-amar-145718162/)
+* Roi Amar
+[github](https://github.com/Roi-Amar) ,
+[linkedIn](https://www.linkedin.com/in/roi-amar-145718162/)
 
 ![demo](assets/demo.gif)
