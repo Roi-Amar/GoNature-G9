@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="pnRight" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane styleClass="rightPane">
+         <children>
+            <Pane prefHeight="112.0" prefWidth="800.0" styleClass="pnAnchor">
+               <children>
+                  <ImageView fitHeight="99.0" fitWidth="81.0" layoutX="360.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@edit2-removebg-80.png" />
+                     </image>
+                  </ImageView>
+                  <Label focusTraversable="false" layoutX="309.0" layoutY="75.0" styleClass="labelTitle" text="Manage Orders" textAlignment="CENTER">
+                     <font>
+                        <Font name="Tahoma Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutY="112.0" prefHeight="1.0" prefWidth="800.0" />
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Label focusTraversable="false" layoutX="27.0" layoutY="126.0" styleClass="labelBold" text="Orders List:" textAlignment="CENTER">
+         <font>
+            <Font name="Tahoma Bold" size="24.0" />
+         </font>
+      </Label>
+      <TableView focusTraversable="false" layoutX="27.0" layoutY="162.0" prefHeight="223.0" prefWidth="749.0" tableMenuButtonVisible="true">
+        <columns>
+            <TableColumn prefWidth="96.0" text="Order Number" />
+          <TableColumn prefWidth="116.0" text="Park Name" />
+          <TableColumn prefWidth="106.0" text="Date" />
+            <TableColumn prefWidth="84.0" text="Time" />
+            <TableColumn prefWidth="99.0" text="Visitors Amount" />
+            <TableColumn minWidth="0.0" prefWidth="158.0" text="Payment" />
+            <TableColumn minWidth="0.0" prefWidth="76.0" text="Price" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnBack" focusTraversable="false" layoutX="28.0" layoutY="539.0" mnemonicParsing="false" prefHeight="36.0" prefWidth="36.0" styleClass="btnBackWithImg" />
+      <Button fx:id="btnCancelOrder" focusTraversable="false" layoutX="675.0" layoutY="436.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="157.0" styleClass="btnMiddleWideRed" text="Cancel Order" />
+      <Button fx:id="btnSave" focusTraversable="false" layoutX="601.0" layoutY="539.0" mnemonicParsing="false" prefHeight="19.0" prefWidth="157.0" styleClass="btnMiddleWide" text="Save" />
+      <JFXTextField fx:id="txtVisitorsNumber" focusColor="#0080ff" focusTraversable="false" labelFloat="true" layoutX="528.0" layoutY="423.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="119.0" promptText="Visitors Amount" styleClass="txtField" unFocusColor="#a3a3a3">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <font>
+            <Font name="Ebrima" size="14.0" />
+         </font>
+      </JFXTextField>
+      <JFXDatePicker editable="false" focusTraversable="false" layoutX="71.0" layoutY="434.0" prefHeight="25.0" prefWidth="110.0" promptText="Arrivel Date" styleClass="datePicker" />
+      <Label layoutX="396.0" layoutY="445.0" styleClass="labelBold" text="Visitors Amount:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="27.0" layoutY="445.0" styleClass="labelBold" text="Date:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="194.0" layoutY="445.0" styleClass="labelBold" text="Time:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label focusTraversable="false" layoutX="27.0" layoutY="392.0" styleClass="labelBold" text="Edit Order" textAlignment="CENTER">
+         <font>
+            <Font name="Tahoma Bold" size="24.0" />
+         </font>
+      </Label>
+      <JFXComboBox fx:id="cbxArrivelTime" focusColor="SEAGREEN" focusTraversable="false" layoutX="243.0" layoutY="413.0" promptText="*Arrivel Time " styleClass="txtField" unFocusColor="#a3a3a3" />
+      <Label fx:id="lblOrderNumber" focusTraversable="false" layoutX="151.0" layoutY="392.0" styleClass="labelBold" text="&lt;#&gt;:" textAlignment="CENTER">
+         <font>
+            <Font name="Tahoma Bold" size="24.0" />
+         </font>
+      </Label>
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</AnchorPane>

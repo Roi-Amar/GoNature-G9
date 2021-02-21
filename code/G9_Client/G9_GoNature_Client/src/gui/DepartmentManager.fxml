@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="pnAnchor" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.DepartmentManagerController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="182.0" styleClass="pnAnchor" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="145.0" prefWidth="181.0" styleClass="rightPaneTop">
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+               <children>
+                  <ImageView fitHeight="145.0" fitWidth="171.0" layoutX="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@logo_new_nobg_500.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Button fx:id="btnDashboard" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="8.0" mnemonicParsing="false" onAction="#handleSideBar" prefHeight="42.0" prefWidth="182.0" styleClass="btnSidebarMenu" text="Dashboard" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView glyphName="DASHBOARD" size="15" />
+               </graphic>
+               <padding>
+                  <Insets left="12.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnVisitsReport" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="8.0" mnemonicParsing="false" onAction="#handleSideBar" prefHeight="42.0" prefWidth="182.0" styleClass="btnSidebarMenu" text="Visits Report" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView glyphName="USERS" size="15" />
+               </graphic>
+               <padding>
+                  <Insets left="12.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnCancelsReport" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="8.0" mnemonicParsing="false" onAction="#handleSideBar" prefHeight="42.0" prefWidth="182.0" styleClass="btnSidebarMenu" text="Cancels Report" textFill="WHITE">
+               <padding>
+                  <Insets left="14.0" />
+               </padding>
+               <graphic>
+                  <FontAwesomeIconView glyphName="BAN" size="16" />
+               </graphic>
+            </Button>
+         </children>
+      </VBox>
+      <Pane layoutX="182.0" prefHeight="65.0" prefWidth="620.0" styleClass="pnRightTop" AnchorPane.leftAnchor="182.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label fx:id="lblTitle" layoutX="21.0" layoutY="15.0" styleClass="labelBold" text="Dashboard">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="418.0" layoutY="25.0" styleClass="labelBold" text="Welcome, ">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Button fx:id="btnLogout" focusTraversable="false" layoutX="543.0" layoutY="20.0" mnemonicParsing="false" onAction="#logout" styleClass="btnSmallRed" text="Logout" />
+            <Separator layoutY="64.0" prefWidth="618.0" />
+            <Label fx:id="lblFirstNameTitle" layoutX="477.0" layoutY="25.0" styleClass="labelBold" />
+         </children>
+      </Pane>
+      <StackPane fx:id="pnStack" layoutX="182.0" layoutY="65.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="182.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
+         <children>
+            <Pane fx:id="pnCancels" layoutX="10.0" layoutY="10.0" prefHeight="536.0" prefWidth="618.0" styleClass="pnRight" stylesheets="@application.css">
+               <children>
+                  <JFXDatePicker fx:id="dpCancelFrom" defaultColor="SEAGREEN" focusTraversable="false" layoutX="124.0" layoutY="33.0" prefHeight="29.0" prefWidth="135.0" promptText="From Date" styleClass="date-picker" />
+                  <JFXDatePicker fx:id="dpCancelTo" defaultColor="SEAGREEN" focusTraversable="false" layoutX="314.0" layoutY="33.0" prefHeight="29.0" prefWidth="135.0" promptText="To Date" styleClass="date-picker" />
+                  <BarChart fx:id="bcCancells" barGap="5.0" layoutX="1.0" layoutY="86.0" prefHeight="430.0" prefWidth="613.0">
+                     <xAxis>
+                        <CategoryAxis label="Day in month" side="BOTTOM" fx:id="xAxis">
+                           <tickLabelFont>
+                              <Font name="System Bold" size="11.0" />
+                           </tickLabelFont>
+                        </CategoryAxis>
+                     </xAxis>
+                     <yAxis>
+                        <NumberAxis fx:id="yAxis" label="Amount" prefHeight="381.0" prefWidth="59.0" side="LEFT">
+                           <tickLabelFont>
+                              <Font name="System Bold" size="11.0" />
+                           </tickLabelFont>
+                        </NumberAxis>
+                     </yAxis>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </BarChart>
+                  <Button fx:id="btnCancelShow" focusTraversable="false" layoutX="457.0" layoutY="36.0" mnemonicParsing="false" onAction="#show" styleClass="btnSmallGreen" text="Show" />
+                  <Button fx:id="btnExport" focusTraversable="false" layoutX="532.0" layoutY="36.0" mnemonicParsing="false" onAction="#export" styleClass="btnSmallGreen" text="Export" />
+                  <Label layoutX="82.0" layoutY="37.0" text="From:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="289.0" layoutY="37.0" text="To:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pnVisits" layoutX="10.0" layoutY="10.0" prefHeight="536.0" prefWidth="618.0" styleClass="pnRight" stylesheets="@application.css">
+               <children>
+                  <JFXDatePicker fx:id="dpVisitorsFrom" defaultColor="SEAGREEN" focusTraversable="false" layoutX="124.0" layoutY="33.0" prefHeight="29.0" prefWidth="135.0" promptText="From Date" styleClass="date-picker" />
+                  <JFXDatePicker fx:id="dpVisitorsTo" defaultColor="SEAGREEN" focusTraversable="false" layoutX="314.0" layoutY="33.0" prefHeight="29.0" prefWidth="135.0" promptText="To Date" styleClass="date-picker" />
+                  <Button fx:id="btnVisitorsShow" focusTraversable="false" layoutX="457.0" layoutY="36.0" mnemonicParsing="false" onAction="#showPieChart" styleClass="btnSmallGreen" text="Show" />
+                  <Button fx:id="btnExportPieChart" focusTraversable="false" layoutX="532.0" layoutY="36.0" mnemonicParsing="false" onAction="#exportPieChart" styleClass="btnSmallGreen" text="Export" />
+                  <Label fx:id="lblRegular" layoutX="116.0" layoutY="94.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <PieChart fx:id="pieRegular" layoutX="-12.0" layoutY="65.0" prefHeight="280.0" prefWidth="320.0" />
+                  <Label fx:id="lblMember" layoutX="434.0" layoutY="94.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <PieChart fx:id="pieMember" layoutX="304.0" layoutY="65.0" prefHeight="280.0" prefWidth="320.0" />
+                  <Label fx:id="lblGroup" layoutX="282.0" layoutY="315.0">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                  </Label>
+                  <PieChart fx:id="pieGroup" layoutX="149.0" layoutY="286.0" prefHeight="280.0" prefWidth="320.0" />
+                  <Label layoutX="82.0" layoutY="37.0" text="From:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="289.0" layoutY="37.0" text="To:">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="pnDashboard" layoutX="10.0" layoutY="10.0" prefHeight="536.0" prefWidth="618.0" styleClass="pnRight">
+               <children>
+                  <AnchorPane layoutX="2.0" layoutY="177.0" prefHeight="268.0" prefWidth="615.0">
+                     <children>
+                        <TableView fx:id="TableDep" layoutX="1.0" layoutY="59.0" prefHeight="218.0" prefWidth="613.0" style="-fx-background-color: #FFFFF0;" stylesheets="@application.css">
+                           <columns>
+                              <TableColumn fx:id="parkName" prefWidth="74.0" style="-fx-background-color: #F0EAD2; -fx-border-color: #deceb8; -fx-alignment: CENTER;" text="Park Name" />
+                              <TableColumn fx:id="requestType" prefWidth="83.0" style="-fx-background-color: #F0EAD2; -fx-border-color: #deceb8; -fx-alignment: CENTER;" text="Request Type" />
+                              <TableColumn fx:id="requestDetails" prefWidth="394.0" style="-fx-background-color: #F0EAD2; -fx-border-color: #deceb8; -fx-alignment: CENTER;" text="Requset Details" />
+                              <TableColumn fx:id="mark" prefWidth="61.0" style="-fx-background-color: #F0EAD2; -fx-border-color: #deceb8; -fx-alignment: CENTER;" text="mark" />
+                           </columns>
+                        </TableView>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="26.0" layoutY="220.0" styleClass="labelBold" text="Last 10 reports:" visible="false">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_LEFT" layoutX="14.0" layoutY="184.0" prefHeight="26.0" prefWidth="320.0" styleClass="labelBold" text="You have    messages to confirm">
+                     <font>
+                        <Font name="Ebrima Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="LabelCount" alignment="TOP_LEFT" layoutX="106.0" layoutY="184.0" prefHeight="26.0" prefWidth="16.0" styleClass="labelBold">
+                     <font>
+                        <Font name="Ebrima Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_LEFT" layoutX="38.0" layoutY="268.0" prefHeight="26.0" prefWidth="174.0" styleClass="labelBold" text="Reports" visible="false">
+                     <font>
+                        <Font name="Ebrima Bold" size="20.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnApprove1" focusTraversable="false" layoutX="205.0" layoutY="466.0" mnemonicParsing="false" onAction="#approve" prefHeight="42.0" prefWidth="75.0" styleClass="btnNext" text="approve" />
+                  <Button fx:id="btnDisaprove1" focusTraversable="false" layoutX="334.0" layoutY="466.0" mnemonicParsing="false" onAction="#disapprove" prefHeight="42.0" prefWidth="75.0" style="-fx-background-color: #cc0000;" styleClass="btnNext" text="disapprove" />
+                  <Label fx:id="lblCurrentVisitors1" layoutX="176.0" layoutY="-2.0">
+                     <font>
+                        <Font name="Ebrima" size="16.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="TVisitors" layoutX="38.0" layoutY="7.0" prefHeight="169.0" prefWidth="182.0" style="-fx-background-color: #FFFFF0; -fx-border-color: #deceb8;">
+                     <columns>
+                        <TableColumn fx:id="visitorColumn" prefWidth="75.0" style="-fx-background-color: #F0EAD2; -fx-border-color: #deceb8;" text="Park Name" />
+                        <TableColumn fx:id="amountColumn" prefWidth="106.0" style="-fx-background-color: #F0EAD2; -fx-border-color: #deceb8;" text="Current Amount" />
+                     </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

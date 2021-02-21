@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="pnAnchor" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ParkEmployeeController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="182.0" styleClass="pnAnchor" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="145.0" prefWidth="181.0">
+               <children>
+                  <ImageView fitHeight="145.0" fitWidth="171.0" layoutX="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@logo_new_nobg_500.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Pane>
+            <Button alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="8.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="182.0" styleClass="btnSidebarMenu" text="Access Control" textAlignment="CENTER" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView glyphName="DASHBOARD" size="15" />
+               </graphic>
+               <padding>
+                  <Insets left="12.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <Pane layoutX="182.0" prefHeight="65.0" prefWidth="620.0" styleClass="pnRightTop" AnchorPane.leftAnchor="182.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label fx:id="lblTitle" layoutX="21.0" layoutY="15.0" styleClass="labelBold" text="Access Control">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="418.0" layoutY="25.0" styleClass="labelBold" text="Welcome,">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Label fx:id="lblFirstNameTitle" layoutX="477.0" layoutY="25.0" styleClass="labelBold" />
+            <Button fx:id="btnLogout" focusTraversable="false" layoutX="543.0" layoutY="20.0" mnemonicParsing="false" onAction="#logout" styleClass="btnSmallRed" text="Logout" />
+            <Separator layoutY="64.0" prefWidth="618.0" />
+         </children>
+      </Pane>
+      <StackPane layoutX="182.0" layoutY="65.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="182.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
+         <children>
+            <Pane fx:id="pnAccessControl" layoutX="10.0" layoutY="10.0" prefHeight="530.0" prefWidth="618.0" styleClass="pnRight">
+               <children>
+                  <Label fx:id="lblDateTitle" layoutX="30.0" layoutY="426.0" styleClass="labelBold" text="Date:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTimeTitle" layoutX="178.0" layoutY="426.0" styleClass="labelBold" text="Time:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtIdOrMemberId" focusColor="#0080ff" focusTraversable="false" labelFloat="true" layoutX="30.0" layoutY="460.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="118.0" promptText="*ID/Member Num" styleClass="txtField" unFocusColor="#a3a3a3">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Ebrima" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <Label layoutX="30.0" styleClass="labelBold" text="Visitors in the park">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblCurrentVisitors" layoutX="176.0" layoutY="-2.0">
+                     <font>
+                        <Font name="Ebrima" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label focusTraversable="false" layoutX="342.0" layoutY="36.0" styleClass="labelBold" text="Order Details:" textAlignment="CENTER">
+                     <font>
+                        <Font name="Tahoma Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Label focusTraversable="false" layoutX="341.0" layoutY="313.0" prefHeight="80.0" prefWidth="271.0" style="-fx-border-color: deceb8;">
+                     <font>
+                        <Font size="11.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="342.0" layoutY="84.0" styleClass="labelBold" text="Order Number:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblOrderNumber" layoutX="462.0" layoutY="82.0">
+                     <font>
+                        <Font name="Ebrima" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="342.0" layoutY="124.0" styleClass="labelBold" text="Park Name:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblParkName" layoutX="435.0" layoutY="122.0">
+                     <font>
+                        <Font name="Ebrima" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="342.0" layoutY="164.0" styleClass="labelBold" text="Date:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDate" layoutX="390.0" layoutY="162.0">
+                     <font>
+                        <Font name="Ebrima" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="342.0" layoutY="204.0" styleClass="labelBold" text="Time:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTime" layoutX="389.0" layoutY="202.0">
+                     <font>
+                        <Font name="Ebrima" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="342.0" layoutY="244.0" styleClass="labelBold" text="Email:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblEmail" layoutX="393.0" layoutY="242.0">
+                     <font>
+                        <Font name="Ebrima" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="342.0" layoutY="284.0" styleClass="labelBold" text="Visitors Number:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblVisitorsNumber" layoutX="476.0" layoutY="283.0">
+                     <font>
+                        <Font name="Ebrima" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="346.0" layoutY="319.0" styleClass="labelBold" text="Price:">
+                     <font>
+                        <Font name="Ebrima Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblPrice" layoutX="387.0" layoutY="318.0">
+                     <font>
+                        <Font name="Ebrima" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="346.0" layoutY="344.0" styleClass="labelBold" text="Discount:" textFill="SEAGREEN">
+                     <font>
+                        <Font name="Ebrima Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblDiscount" layoutX="413.0" layoutY="343.0" textFill="SEAGREEN">
+                     <font>
+                        <Font name="Ebrima" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="346.0" layoutY="369.0" styleClass="labelBold" text="Total Price:">
+                     <font>
+                        <Font name="Ebrima Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblTotalPrice" layoutX="425.0" layoutY="368.0">
+                     <font>
+                        <Font name="Ebrima" size="14.0" />
+                     </font>
+                  </Label>
+                  <Separator layoutX="309.0" layoutY="41.0" orientation="VERTICAL" prefHeight="468.0" />
+                  <Button fx:id="btnApprove" focusTraversable="false" layoutX="471.0" layoutY="467.0" mnemonicParsing="false" onAction="#approve" prefHeight="19.0" prefWidth="157.0" styleClass="btnNext" text="Approve" />
+                  <Button fx:id="btnShowDetails" focusTraversable="false" layoutX="93.0" layoutY="235.0" mnemonicParsing="false" onAction="#showDetails" prefHeight="19.0" prefWidth="157.0" styleClass="btnNext" text="Show Details" />
+                  <JFXTextField fx:id="txtOrderNumber" focusColor="#0080ff" focusTraversable="false" labelFloat="true" layoutX="95.0" layoutY="174.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="118.0" promptText="*Order Number" styleClass="txtField" unFocusColor="#a3a3a3">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Ebrima" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <Button fx:id="btnRandomVisitor" focusTraversable="false" layoutX="30.0" layoutY="427.0" mnemonicParsing="false" onAction="#randomVisitor" prefHeight="19.0" prefWidth="157.0" styleClass="btnWelcome" text="Random Visitor" />
+                  <Button fx:id="btnBarcodeScan" focusTraversable="false" layoutX="30.0" layoutY="41.0" mnemonicParsing="false" onAction="#barcodeScan" prefHeight="19.0" prefWidth="157.0" styleClass="btnWelcome" text="Barcode Scan" />
+                  <Separator layoutX="30.0" layoutY="147.0" prefHeight="3.0" prefWidth="250.0" />
+                  <ImageView fitHeight="126.0" fitWidth="208.0" layoutX="51.0" layoutY="298.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@park_minimal_nobg_500.png" />
+                     </image>
+                  </ImageView>
+                  <Separator layoutX="30.0" layoutY="301.0" prefHeight="3.0" prefWidth="250.0" />
+                  <JFXTextField fx:id="txtVisitorsAmount" focusColor="#0080ff" focusTraversable="false" labelFloat="true" layoutX="341.0" layoutY="399.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="118.0" promptText="*Visitors Amount" styleClass="txtField" unFocusColor="#a3a3a3">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Ebrima" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXRadioButton fx:id="radEnter" layoutX="342.0" layoutY="465.0" text="Enter" textFill="GREEN">
+                     <font>
+                        <Font name="Ebrima Bold" size="14.0" />
+                     </font>
+                     <toggleGroup>
+                        <ToggleGroup fx:id="radGroupStatus" />
+                     </toggleGroup>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="radExit" layoutX="342.0" layoutY="489.0" text="Exit" textFill="#da0101" toggleGroup="$radGroupStatus">
+                     <font>
+                        <Font name="Ebrima Bold" size="14.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <Label fx:id="lblRandomDate" layoutX="74.0" layoutY="424.0">
+                     <font>
+                        <Font name="Ebrima" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="lblRandomTime" layoutX="225.0" layoutY="424.0">
+                     <font>
+                        <Font name="Ebrima" size="16.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="btnManualAccess" focusTraversable="false" layoutX="29.0" layoutY="199.0" mnemonicParsing="false" onAction="#showDetails" prefHeight="19.0" prefWidth="157.0" styleClass="btnWelcome" text="Manual Access" />
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

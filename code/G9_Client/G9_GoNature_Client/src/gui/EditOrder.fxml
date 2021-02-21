@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXDatePicker?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="pnAnchor" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ManageOrderController">
+   <children>
+      <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="400.0" styleClass="pnRightTop">
+         <children>
+            <Label layoutX="81.0" layoutY="224.0" styleClass="labelBold" text="Park Name:">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label fx:id="lblParkName" layoutX="176.0" layoutY="222.0">
+               <font>
+                  <Font name="Ebrima" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="81.0" layoutY="264.0" styleClass="labelBold" text="Date:">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label layoutX="81.0" layoutY="304.0" styleClass="labelBold" text="Time:">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label layoutX="81.0" layoutY="344.0" styleClass="labelBold" text="Visitors Number:">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label layoutX="81.0" layoutY="384.0" styleClass="labelBold" text="Email:">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label fx:id="lblDate" layoutX="131.0" layoutY="262.0">
+               <font>
+                  <Font name="Ebrima" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTime" layoutX="130.0" layoutY="302.0">
+               <font>
+                  <Font name="Ebrima" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblVisitors" layoutX="217.0" layoutY="342.0">
+               <font>
+                  <Font name="Ebrima" size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblMail" layoutX="134.0" layoutY="381.0">
+               <font>
+                  <Font name="Ebrima" size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="81.0" layoutY="184.0" styleClass="labelBold" text="Order Number:">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label fx:id="lblOrderNum" layoutX="202.0" layoutY="182.0">
+               <font>
+                  <Font name="Ebrima" size="16.0" />
+               </font>
+            </Label>
+            <Label focusTraversable="false" layoutX="81.0" layoutY="137.0" styleClass="labelBold" text="Order Details:" textAlignment="CENTER">
+               <font>
+                  <Font name="Tahoma Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label focusTraversable="false" layoutX="79.0" layoutY="435.0" prefHeight="84.0" prefWidth="210.0" style="-fx-border-color: deceb8;">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Label>
+            <Label layoutX="86.0" layoutY="439.0" styleClass="labelBold" text="Price:">
+               <font>
+                  <Font name="Ebrima Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="86.0" layoutY="464.0" styleClass="labelBold" text="Discount:" textFill="SEAGREEN">
+               <font>
+                  <Font name="Ebrima Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="86.0" layoutY="490.0" styleClass="labelBold" text="Total Price:">
+               <font>
+                  <Font name="Ebrima Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblPrice" layoutX="126.0" layoutY="438.0">
+               <font>
+                  <Font name="Ebrima" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblDiscount" layoutX="152.0" layoutY="463.0">
+               <font>
+                  <Font name="Ebrima" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="lblTotal" layoutX="165.0" layoutY="489.0">
+               <font>
+                  <Font name="Ebrima" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Pane layoutX="407.0" prefHeight="600.0" prefWidth="400.0" styleClass="pnRight">
+         <children>
+            <Button fx:id="btnUpdate" focusTraversable="false" layoutX="129.0" layoutY="437.0" mnemonicParsing="false" onAction="#update" prefHeight="19.0" prefWidth="157.0" styleClass="btnNext" text="Update" />
+            <Button fx:id="btnCancel" focusTraversable="false" layoutX="140.0" layoutY="538.0" mnemonicParsing="false" onAction="#cancelOrder" prefHeight="25.0" prefWidth="157.0" styleClass="btnMiddleWideRed" text="Cancel Order" />
+            <JFXTextField fx:id="txtVisitorsNumber" focusColor="#0080ff" focusTraversable="false" labelFloat="true" layoutX="131.0" layoutY="176.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="142.0" promptText="Visitors Amount" styleClass="txtField" unFocusColor="#a3a3a3">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <font>
+                  <Font name="Ebrima" size="14.0" />
+               </font>
+            </JFXTextField>
+            <JFXComboBox fx:id="cbxArriveTime" focusColor="SEAGREEN" focusTraversable="false" layoutX="130.0" layoutY="350.0" promptText="Arrivel Time " styleClass="txtField" unFocusColor="#a3a3a3" />
+            <Label fx:id="lblEditVisitors" layoutX="130.0" layoutY="157.0" styleClass="labelBold" text="Edit the visitors amount:">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label layoutX="130.0" layoutY="246.0" styleClass="labelBold" text="Edit date:">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Label fx:id="lblEdit" layoutX="130.0" layoutY="337.0" styleClass="labelBold" text="Edit time:">
+               <font>
+                  <Font size="16.0" />
+               </font></Label>
+            <Separator layoutX="66.0" layoutY="513.0" prefHeight="3.0" prefWidth="113.0" />
+            <Label layoutX="184.0" layoutY="505.0" text="Or" />
+            <Separator layoutX="201.0" layoutY="513.0" prefHeight="3.0" prefWidth="113.0" />
+            <Button fx:id="btnBack" focusTraversable="false" layoutX="11.0" layoutY="124.0" mnemonicParsing="false" onAction="#back" prefHeight="36.0" prefWidth="36.0" styleClass="btnBackWithImg" />
+            <JFXDatePicker fx:id="txtdate" defaultColor="SEAGREEN" editable="false" focusTraversable="false" layoutX="126.0" layoutY="280.0" prefHeight="40.0" prefWidth="129.0" promptText="*Arrivel Date" style="-fx-background-color: #FFFFF0;" styleClass="datePicker" stylesheets="@application.css" />
+            <Button fx:id="btnNoconfirme" layoutX="30.0" layoutY="390.0" mnemonicParsing="false" onAction="#confirmeArrival" prefHeight="135.0" prefWidth="329.0" style="-fx-background-color: #cc0000; -fx-font-size: 18px; -fx-font-family: Ebrima; -fx-font-weight: bold;" styleClass="btnConfirmArrival" text="Cancel Reservation" visible="false" />
+            <Button fx:id="btnconfirme" layoutX="26.0" layoutY="200.0" mnemonicParsing="false" onAction="#confirmeArrival" prefHeight="135.0" prefWidth="329.0" style="-fx-font-size: 18px; -fx-font-family: Ebrima; -fx-font-weight: bold;" styleClass="btnConfirmArrival" text="Confirm Arrival" visible="false" />
+            <Label layoutX="21.0" layoutY="172.0" style="-fx-font-family: Ebrima; -fx-background-size: 16px;" />
+         </children>
+      </Pane>
+      <Pane prefHeight="112.0" prefWidth="800.0" styleClass="pnAnchor">
+         <children>
+            <Separator layoutY="112.0" prefWidth="800.0" />
+            <ImageView fitHeight="100.0" fitWidth="84.0" layoutX="358.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@cartedit-removebg-120.png" />
+               </image>
+            </ImageView>
+            <Label focusTraversable="false" layoutX="305.0" layoutY="76.0" styleClass="labelTitle" text="Manage Order" textAlignment="CENTER">
+               <font>
+                  <Font name="Tahoma Bold" size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</AnchorPane>

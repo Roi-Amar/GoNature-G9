@@ -1,0 +1,397 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+/********** Anchor Pane **********/
+.pnAnchor {
+	-fx-background-color: #deceb8;
+}
+
+.tooltip1 {
+    -fx-background: rgba(30,30,30);
+    -fx-text-fill: white;
+    -fx-background-color: rgba(30,30,30,0.8);
+    -fx-background-radius: 6px;
+    -fx-background-insets: 0;
+    -fx-padding: 0.667em 0.75em 0.667em 0.75em; /* 10px */
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.5) , 10, 0.0 , 0 , 3 );
+    -fx-font-size: 0.85em;
+}
+
+/********** Right Pane **********/
+.pnRight {
+    -fx-background-color: #FFFFF0;
+}
+
+/********** Right Top Pane **********/
+.pnRightTop {
+    -fx-background-color: #F0EAD2;
+}
+
+/********** Global Labels **********/
+.label {
+	-fx-font-family: "Ebrima";
+}
+
+/********** Labels With Bold **********/
+.labelBold {
+	-fx-font-weight: bold;
+}
+
+/********** Global Button **********/
+.button {
+	-fx-font-family: "roboto";
+	-fx-background-color: #2E8B57;
+	-fx-text-fill: white;
+	-fx-background-radius: 5px;
+	-fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.5), 10, 0.4, 0, 0);
+}
+
+/********** Label For Titles **********/
+.labelTitle {
+	-fx-font-family: "Ebrima";
+	-fx-font-size: 28px;
+	-fx-font-weight: bold;
+}
+
+/********** Back Button **********/
+.btnBackWithImg {
+	-fx-background-color: transparent;
+	-fx-background-size: 36px;
+    -fx-background-repeat: no-repeat;
+	-fx-effect: null;
+	-fx-Min-width: 36px;
+	-fx-Min-height: 36px;
+	-fx-background-image: url('back-removebg-80.png');
+}
+
+.btnBackWithImg:hover {
+	-fx-background-image: url('backhoover-removebg-80.png');
+}
+
+/********** (Id / Member Id) I Button **********/
+.btnIWithImg {
+	-fx-background-color: transparent;
+	-fx-background-size: 24px;
+    -fx-background-repeat: no-repeat;
+	-fx-effect: null;
+	-fx-background-image: url('info-removebg-35.png');
+}
+
+.btnIWithImg:hover {
+	-fx-background-image: url('infohoover-removebg-35.png');
+}
+
+/********** Welcome Buttons **********/
+.btnWelcome {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 250px;
+    -fx-pref-height: 80px;
+}
+
+.btnWelcome:hover {
+	-fx-border-insets: -1 -1 -1 -1;
+	-fx-border-radius: 5px;
+	-fx-border-width: 2px;
+    -fx-border-color: white;
+}
+
+.btnWelcome:pressed {
+    -fx-effect: null;
+}
+
+/********** Like (Find, Add, Delete, Send, Verify, Reset) Buttons **********/
+.btnMiddle {
+	-fx-font-size: 14px;
+	-fx-font-weight: bold;
+	-fx-pref-width: 70px;
+	-fx-pref-height: 25px;
+}
+
+.btnMiddle:hover {
+	-fx-border-insets: -1 -1 -1 -1;
+	-fx-border-radius: 5px;
+	-fx-border-width: 2px;
+    -fx-border-color: white;
+}
+
+.btnMiddle:pressed {
+    -fx-effect: null;
+}
+
+/********** WaitingList (Check, List Me) / Login (Login) Buttons **********/
+.btnMiddleWide {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 175px;
+    -fx-pref-height: 40px;
+}
+
+.btnMiddleWide:hover {
+	-fx-border-insets: -1 -1 -1 -1;
+	-fx-border-radius: 5px;
+	-fx-border-width: 2px;
+    -fx-border-color: white;
+}
+
+.btnMiddleWide:pressed {
+    -fx-effect: null;
+}
+
+/********** Like (Cancel Order) Button **********/
+.btnMiddleWideRed {
+	-fx-font-size: 12px;
+	-fx-font-weight: bold;
+	-fx-background-color: #cc0000;
+	-fx-pref-width: 100px;
+	-fx-pref-height: 20px;
+}
+
+.btnMiddleWideRed:hover {
+	-fx-border-insets: -1 -1 -1 -1;
+	-fx-border-radius: 5px;
+	-fx-border-width: 2px;
+    -fx-border-color: white;
+}
+
+.btnMiddleWideRed:pressed {
+    -fx-effect: null;
+}
+
+/********** Like (Delete Member) Button **********/
+.btnDeleteMemberShip {
+	-fx-font-size: 12px;
+	-fx-font-weight: bold;
+	-fx-background-color: #cc0000;
+	-fx-pref-width: 140px;
+	-fx-pref-height: 20px;
+}
+
+.btnDeleteMemberShip:hover {
+	-fx-border-insets: -1 -1 -1 -1;
+	-fx-border-radius: 5px;
+	-fx-border-width: 2px;
+    -fx-border-color: white;
+}
+
+.btnDeleteMemberShip:pressed {
+    -fx-effect: null;
+}
+
+/********** Like (Here) Button **********/
+.btnSmallGreen {
+	-fx-font-size: 12px;
+	-fx-pref-width: 60px;
+	-fx-pref-height: 25px;
+}
+
+.btnSmallGreen:hover {
+	-fx-border-insets: -1 -1 -1 -1;
+	-fx-border-radius: 5px;
+	-fx-border-width: 2px;
+    -fx-border-color: white;
+}
+
+.btnSmallGreen:pressed {
+    -fx-effect: null;
+}
+
+/********** Like (Logout) Button **********/
+.btnSmallRed {
+	-fx-font-size: 12px;
+	-fx-background-color: #cc0000;
+	-fx-pref-width: 60px;
+	-fx-pref-height: 25px;
+}
+
+.btnSmallRed:hover {
+	-fx-border-insets: -1 -1 -1 -1;
+	-fx-border-radius: 5px;
+	-fx-border-width: 2px;
+    -fx-border-color: white;
+}
+
+.btnSmallRed:pressed {
+    -fx-effect: null;
+}
+
+/********** Order (Clear) Button **********/
+.btnClear {
+    -fx-font-size: 14px;
+    -fx-background-color: #FFFFF0;
+    -fx-text-fill: black;
+    -fx-pref-width: 122px;
+    -fx-pref-height: 40px;
+}
+
+
+.btnClear:hover {
+	-fx-border-insets: -1 -1 -1 -1;
+	-fx-border-radius: 5px;
+	-fx-border-width: 2px;
+    -fx-border-color: white;
+}
+
+.btnClear:pressed {
+    -fx-effect: null;
+}
+
+/********** Order (Next) / Payment (Continue) / Confirmation (Home) Buttons **********/
+.btnNext {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 122px;
+    -fx-pref-height: 40px;
+}
+
+.btnNext:hover {
+	-fx-border-insets: -1 -1 -1 -1;
+	-fx-border-radius: 5px;
+	-fx-border-width: 2px;
+    -fx-border-color: white;
+}
+
+.btnNext:pressed {
+    -fx-effect: null;
+}
+
+/********** All JFXTextFields Style **********/
+.txtField {
+    -fx-font-family: Ebrima;
+    -fx-highlight-fill: #a3a3a3;
+    -fx-font-size: 14px;
+    -fx-prompt-text-fill: #a3a3a3;
+    -fx-text-fill: black;
+    -fx-padding: 20px 0px 0px 0px;
+    -jfx-unfocus-color: #a3a3a3;
+    -jfx-focus-color: #a3a3a3;
+}
+
+
+/********** For JFXTextFields With Invalid Input **********/
+.txtFieldRed {
+	-fx-highlight-fill: red;
+	-fx-prompt-text-fill: red;
+	-jfx-unfocus-color: red;
+    -jfx-focus-color: red;
+}
+
+/********** For JFXTextFields With valid Input **********/
+.txtFieldGreen {
+	-fx-highlight-fill: green;
+	-fx-prompt-text-fill: green;
+	-jfx-unfocus-color: green;
+    -jfx-focus-color: green;
+}
+
+/********** JFXDatePicker & His JFXTextField Style **********/
+.date-picker > .text-field {
+	-fx-prompt-text-fill: #a3a3a3;
+	-fx-font-size: 13px;
+
+}
+
+.date-picker:focused > .text-field,
+.date-picker > .text-field:focused {
+    -fx-prompt-text-fill: #009688;
+
+}
+
+.date-picker .input-line {
+	-fx-background-color: #a3a3a3;
+}
+
+ .date-picker .cell {
+-fx-border-color: #F0EAD2;
+ }
+
+ /* Remove The Arrow Buttons Style */
+.jfx-button {
+	-fx-background-color: transparent;
+	-fx-effect: null;
+}
+
+.date-picker-popup  {
+	-fx-border-color: #2e8b57;
+-fx-background-color: #FFFFF0;
+ }
+
+/********** All Dashboards Side Bar Buttons Style **********/
+.btnSidebarMenu {
+	-fx-background-color: transparent;
+	-fx-text-fill: black;
+	-fx-effect: null;
+}
+
+.btnSidebarMenu:hover {
+	-fx-border-color: brown;
+	-fx-border-width: 0px 0px 0px 3px;
+}
+
+.btnSidebarMenu:focus {
+	-fx-border-color: brown;
+	-fx-border-width: 0px 0px 0px 3px;
+}
+
+/********** Labels Reports Status **********/
+.pnReportStatus {
+	-fx-background-color: green;
+	-fx-pref-width: 170px;
+	-fx-pref-height: 120px;
+	-fx-background-radius: 2px;
+}
+
+/********** Chart **********/
+.default-color0.chart-bar {
+	-fx-bar-fill: #58C88B;
+}
+
+.default-color1.chart-bar {
+	-fx-bar-fill: #2E8B57;
+}
+
+.default-color2.chart-bar {
+	-fx-bar-fill: #226842;
+}
+
+/********** Edit Order Buttons **********/
+.btnConfirmArrival {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 329px;
+    -fx-pref-height: 135px;
+}
+
+.btnConfirmArrival:hover {
+	-fx-border-insets: -1 -1 -1 -1;
+	-fx-border-radius: 5px;
+	-fx-border-width: 2px;
+    -fx-border-color: white;
+}
+
+.btnConfirmArrival:pressed {
+    -fx-effect: null;
+}
+
+/********** Pie Chart **********/
+.default-color0.chart-pie {
+	-fx-pie-color: #b3e6c9;
+}
+
+.default-color1.chart-pie {
+	-fx-pie-color: #58C88B;
+}
+
+.default-color2.chart-pie {
+	-fx-pie-color: #2E8B57;
+}
+
+.default-color3.chart-pie {
+	-fx-pie-color: #226842;
+}
+
+.chart-pie {
+	-fx-border-width: 0;
+}
+
+.chart-content{
+    -fx-padding :2;
+}

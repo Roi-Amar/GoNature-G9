@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXCheckBox?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" styleClass="pnAnchor" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ServiceRepresentativeController">
+   <children>
+      <VBox prefHeight="400.0" prefWidth="182.0" styleClass="pnAnchor" AnchorPane.bottomAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane prefHeight="145.0" prefWidth="181.0">
+               <children>
+                  <ImageView fitHeight="145.0" fitWidth="171.0" layoutX="19.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@logo_new_nobg_500.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </Pane>
+            <Button fx:id="btnAddMember" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="8.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="182.0" styleClass="btnSidebarMenu" text="Add Member" textAlignment="CENTER" textFill="WHITE">
+               <graphic>
+                  <FontAwesomeIconView glyphName="PLUS" size="16" />
+               </graphic>
+               <padding>
+                  <Insets left="14.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnEditOrDelete" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="8.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="182.0" styleClass="btnSidebarMenu" text="Delete Member" textAlignment="CENTER" textFill="WHITE" visible="false">
+               <graphic>
+                  <FontAwesomeIconView glyphName="EDIT" size="16" />
+               </graphic>
+               <padding>
+                  <Insets left="12.0" />
+               </padding>
+            </Button>
+            <Button fx:id="btnSettings" alignment="BASELINE_LEFT" focusTraversable="false" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="182.0" styleClass="btnSidebarMenu" text="Settings" textFill="WHITE" visible="false">
+               <graphic>
+                  <FontAwesomeIconView glyphName="COG" size="16" />
+               </graphic>
+               <padding>
+                  <Insets left="12.0" />
+               </padding>
+            </Button>
+         </children>
+      </VBox>
+      <Pane layoutX="182.0" prefHeight="65.0" prefWidth="620.0" styleClass="pnRightTop" AnchorPane.leftAnchor="182.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <Label fx:id="lblTitle" layoutX="21.0" layoutY="15.0" styleClass="labelBold" text="Add Member">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <Label layoutX="418.0" layoutY="25.0" styleClass="labelBold" text="Welcome,">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font></Label>
+            <Button fx:id="btnLogout" focusTraversable="false" layoutX="543.0" layoutY="20.0" mnemonicParsing="false" onAction="#logout" styleClass="btnSmallRed" text="Logout" />
+            <Separator layoutY="64.0" prefWidth="618.0" />
+            <Label fx:id="lblFirstNameTitle" layoutX="477.0" layoutY="25.0" styleClass="labelBold" />
+         </children>
+      </Pane>
+      <StackPane layoutX="182.0" layoutY="65.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="182.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="65.0">
+         <children>
+            <Pane fx:id="pnSettings" prefHeight="536.0" prefWidth="618.0" styleClass="pnRight" stylesheets="@application.css">
+               <children>
+                  <TableView layoutX="10.0" layoutY="105.0" prefHeight="422.0" prefWidth="598.0">
+                     <columns>
+                        <TableColumn prefWidth="75.0" text="C1" />
+                        <TableColumn prefWidth="75.0" text="C2" />
+                     </columns>
+                  </TableView>
+               </children>
+            </Pane>
+            <Pane fx:id="pnDashboard" layoutX="10.0" layoutY="10.0" prefHeight="530.0" prefWidth="618.0" styleClass="pnRight">
+               <children>
+                  <Label focusTraversable="false" layoutX="51.0" layoutY="31.0" styleClass="labelBold" text="Want to edit?" textAlignment="CENTER">
+                     <font>
+                        <Font name="Tahoma Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <Button focusTraversable="false" layoutX="502.0" layoutY="465.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="157.0" styleClass="btnMiddle" text="Save" />
+                  <Button focusTraversable="false" layoutX="51.0" layoutY="465.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="157.0" style="-fx-background-color: #cc0000;" styleClass="btnDeleteMemberShip" text="Delete Membership" />
+                  <JFXTextField focusColor="#0080ff" labelFloat="true" layoutX="51.0" layoutY="68.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" promptText="Id / Member Id" styleClass="txtField" unFocusColor="#a3a3a3">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Ebrima" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <Button focusTraversable="false" layoutX="51.0" layoutY="134.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="157.0" styleClass="btnMiddle" text="Find" />
+                  <Label focusTraversable="false" layoutX="51.0" layoutY="207.0" styleClass="labelBold" text="Member Details:" textAlignment="CENTER">
+                     <font>
+                        <Font name="Tahoma Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField focusColor="#0080ff" labelFloat="true" layoutX="51.0" layoutY="245.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" promptText="*First Name" styleClass="txtField" unFocusColor="#a3a3a3">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Ebrima" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField focusColor="#0080ff" focusTraversable="false" labelFloat="true" layoutX="51.0" layoutY="295.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" promptText="*Last Name" styleClass="txtField" unFocusColor="#a3a3a3">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Ebrima" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField focusColor="#0080ff" focusTraversable="false" labelFloat="true" layoutX="51.0" layoutY="395.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" promptText="*Phone Number" styleClass="txtField" unFocusColor="#a3a3a3">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Ebrima" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXComboBox focusColor="SEAGREEN" focusTraversable="false" layoutX="319.0" layoutY="260.0" prefHeight="25.0" prefWidth="250.0" promptText="Payment" unFocusColor="#a3a3a3" />
+                  <JFXTextField focusColor="#0080ff" focusTraversable="false" labelFloat="true" layoutX="51.0" layoutY="345.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" promptText="*Email" styleClass="txtField" unFocusColor="#a3a3a3">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Ebrima" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField disable="true" focusColor="#0080ff" focusTraversable="false" labelFloat="true" layoutX="319.0" layoutY="345.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" promptText="Family Members Amount" styleClass="txtField" unFocusColor="#a3a3a3">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Ebrima" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXCheckBox layoutX="318.0" layoutY="320.0" text="Family Membership" />
+                  <JFXCheckBox layoutX="319.0" layoutY="419.0" text="Tour Guide Access" />
+                  <ImageView fitHeight="158.0" fitWidth="250.0" layoutX="317.0" layoutY="38.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@park_minimal_nobg_500.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane fx:id="pnDashboard1" prefHeight="530.0" prefWidth="618.0" styleClass="pnRight">
+               <children>
+                  <Label focusTraversable="false" layoutX="38.0" layoutY="64.0" styleClass="labelBold" text="Member Details:" textAlignment="CENTER">
+                     <font>
+                        <Font name="Tahoma Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <JFXTextField fx:id="txtId" focusColor="#0080ff" labelFloat="true" layoutX="38.0" layoutY="102.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" promptText="Id" styleClass="txtField" unFocusColor="#a3a3a3">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Ebrima" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtFirstName" focusColor="#0080ff" labelFloat="true" layoutX="38.0" layoutY="152.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" promptText="First Name" styleClass="txtField" unFocusColor="#a3a3a3">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Ebrima" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtLastName" focusColor="#0080ff" labelFloat="true" layoutX="38.0" layoutY="202.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" promptText="Last Name" styleClass="txtField" unFocusColor="#a3a3a3">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Ebrima" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtEmail" focusColor="#0080ff" labelFloat="true" layoutX="38.0" layoutY="252.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" promptText="Email" styleClass="txtField" unFocusColor="#a3a3a3">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Ebrima" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtPhoneNumber" focusColor="#0080ff" labelFloat="true" layoutX="38.0" layoutY="302.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" promptText="Phone Number" styleClass="txtField" unFocusColor="#a3a3a3">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Ebrima" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="txtMembersAmount" focusColor="#0080ff" labelFloat="true" layoutX="38.0" layoutY="362.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="250.0" promptText="Members Amount" styleClass="txtField" unFocusColor="#a3a3a3">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <font>
+                        <Font name="Ebrima" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXCheckBox fx:id="cbGuideMember" layoutX="378.0" layoutY="113.0" text="Tour Guide " />
+                  <Button focusTraversable="false" layoutX="387.0" layoutY="382.0" mnemonicParsing="false" onAction="#addMember" prefHeight="25.0" prefWidth="157.0" styleClass="btnMiddle" text="Add" />
+                  <ImageView fitHeight="158.0" fitWidth="250.0" layoutX="297.0" layoutY="213.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@park_minimal_nobg_500.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="btnCreditCard" layoutX="371.0" layoutY="180.0" mnemonicParsing="false" onAction="#creditCard" text="Add Credit Card" textAlignment="CENTER" />
+               </children>
+            </Pane>
+         </children>
+      </StackPane>
+   </children>
+</AnchorPane>

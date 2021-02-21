@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="pnResetPassword" maxHeight="300.0" maxWidth="300.0" prefHeight="400.0" prefWidth="400.0" styleClass="pnRight" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TermsConditions">
+   <children>
+      <Pane fx:id="pnResetPassword1" layoutX="-1.0" layoutY="1.0" maxHeight="300.0" maxWidth="300.0" prefHeight="400.0" prefWidth="400.0" styleClass="pnRight" stylesheets="@application.css">
+         <children>
+            <Button fx:id="btnContinue" focusTraversable="false" layoutX="63.0" layoutY="233.0" mnemonicParsing="false" onAction="#btnCon" prefHeight="25.0" prefWidth="157.0" styleClass="btnMiddleWide" text="Continue" />
+         </children>
+      </Pane>
+      <Label layoutX="24.0" layoutY="57.0" prefHeight="21.0" prefWidth="261.0" text="Do not harm or feed the animals" />
+      <Label focusTraversable="false" layoutX="44.0" layoutY="20.0" styleClass="labelBold" text="Terms And Conditions" underline="true">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="16.0" layoutY="61.0" text="*" textFill="RED" />
+      <Label layoutX="24.0" layoutY="83.0" prefHeight="21.0" prefWidth="261.0" text="Take your trash with you" />
+      <Label layoutX="16.0" layoutY="85.0" text="*" textFill="RED" />
+      <Label layoutX="25.0" layoutY="109.0" prefHeight="21.0" prefWidth="271.0" text="Do not harm the plants around" textFill="#050505" />
+      <Label layoutX="25.0" layoutY="135.0" prefHeight="21.0" prefWidth="271.0" text="Enjoy your time here" textFill="#0b0101" />
+      <Label layoutX="16.0" layoutY="139.0" text="*" textFill="RED" />
+      <Label layoutX="16.0" layoutY="113.0" text="*" textFill="RED" />
+      <ImageView fitHeight="81.0" fitWidth="151.0" layoutX="148.0" layoutY="139.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@park_minimal_nobg_500.png" />
+         </image>
+      </ImageView>
+   </children>
+</Pane>
