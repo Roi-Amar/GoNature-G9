@@ -20,7 +20,25 @@ We built Test suites and test cases for our code and test the front-end function
 Both of our Java projects were documented using JavaDoc.
 
 Overall, we had a huge success and we learned a lot in the process (and we even got A+ grades).
-A special thanks to all Group9 members:
-g9 members profile links
+
+Participantes:
+--------------
+
+* @nastyak6	* [nastyak6](https://github.com/nastyak6) 
+* @anastasia_kokin * [anastasia_kokin](https://www.linkedin.com/in/anastasia-kokin-957914197/)
+
+* @HodayaMekonen	* [HodayaMekonen](https://github.com/HodayaMekonen)
+
+* @RinatSt	* [RinatSt](https://github.com/RinatSt)
+* @rinat_stoudenets	* [rinat_stoudenets](https://www.linkedin.com/in/rinat-stoudenets-169915127/)
+
+* @haimazu	* [haimazu](https://github.com/haimazu)
+* @haim_azulay	* [haim_azulay](https://www.linkedin.com/in/haimazulay/)
+
+* @barKatz0610	* [barKatz0610](https://github.com/barKatz0610)
+* @bar_katz	* [bar_katz](https://www.linkedin.com/in/bar-katz-a07b5019b/)
+
+* @Roi-Amar	* [Roi-Amar](https://github.com/Roi-Amar)
+* @roi_amar	* [roi_amar](https://www.linkedin.com/in/roi-amar-145718162/)
 
 ![demo](assets/demo.gif)
