@@ -3,7 +3,7 @@ Nature parks reservation and mannagment system (Java)
 ----------------------
 
 ----------------------
-
+![demo](assets/logo_new.png)
 
 This project assigment was assigned and combined from three curses:
 -	Software Development Methodologies
