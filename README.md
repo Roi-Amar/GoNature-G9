@@ -25,7 +25,7 @@ Participantes:
 --------------
 
 * Anastasia Kokin:
-[github](https://github.com/nastyak6) 
+[github](https://github.com/nastyak6) ,
 [linkedin](https://www.linkedin.com/in/anastasia-kokin-957914197/)
 
 * @HodayaMekonen	* [HodayaMekonen](https://github.com/HodayaMekonen)
